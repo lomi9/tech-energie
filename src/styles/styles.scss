@@ -1,0 +1,16 @@
+@import "../pages/home/Home.scss";
+
+#root{
+    background-color: #FFFDF7;
+}
+*, html{
+   box-sizing: border-box;
+   font-size: 16px;
+   font-family: 'Roboto Condensed', sans-serif;
+   scroll-behavior: smooth;
+}
+
+body {
+    margin: auto;
+    background-color:#FFFDF7;
+}
