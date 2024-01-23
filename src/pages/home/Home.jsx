@@ -23,26 +23,26 @@ export default function Home () {
         });
 
         tl1.to(".home__content-circle", {
-            duration: 0.5,
+            duration: 1,
             rotationY: 180,
             autoAlpha: 0
         });
 
         tl1.to(".home__content-left", {
-            duration: 1.5,
+            duration: 1.3,
             width: "100%",
             immediateRender: false
-        }, "-=0.25");
+        }, "-=0.1");
 
         tl1.to(".home__content-right", {
-            duration: 1.5,
-            width: "0%"
-        }, "-=1.5");
+            duration: 1.4,
+            width: "0%",
+        }, "-=1.292");
 
         tl1.to(".home__content-right-image-filter-button-title", {
-            duration: 1.5,
+            duration: 1.4,
             autoAlpha: 0
-        }, "-=1.5");
+        }, "-=1.292");
     };
 
     const goToPlomberie = (event) => {
