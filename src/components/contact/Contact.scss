@@ -1,0 +1,269 @@
+@import "../../styles/utilities.scss";
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 10vw;
+    background-color: $main-background-color;
+
+    &__header{
+    @include center;
+    width: 100%;
+    padding-bottom: 7%;
+
+        &-title{
+            padding: 10% 5% 0 5%;
+            text-align: center;
+            color: $main-color-7;
+            @include title-desktop-style;
+            font-family: $font-family-3;
+            text-align: start;
+            
+    }
+    &-text{
+        padding: 2% 5% 0 5%;
+        width: 100%;
+        position: relative;
+        @include center;
+
+        &-p{       
+            @include title-desktop-style;
+            font-family: $font-family-2;
+            font-size: 3.5vw;
+            text-align: center;
+            color: $main-color-5;
+            position: relative;
+
+        }
+        &-underline1{
+            position: absolute;
+            height: 100%;
+            width: 20vw;
+            background-color: transparent;
+            border-bottom: 1px solid $main-color-5;
+            bottom: 0;
+            z-index: 10;
+
+        }
+        &-underline2{
+            position: absolute;
+            height: 100%;
+            width: 20vw;
+            background-color: transparent;
+            border-bottom: 1px solid $main-color-5;
+            bottom: -6px;
+            z-index: 10;
+            transform: translateX(5vw);
+            
+        }
+}
+
+    }
+    &__content{
+        width: 100%;
+        display: flex;
+
+        &-left{
+            @include center;
+            width: 50%;
+            &-form{
+                @include center;
+                width: 100%;
+                &-label{
+                    @include center;
+                    width: 100%;
+                    padding: 1vw;
+                    font-family: $font-family-3;
+                    font-size: 2vw;
+                    font-weight: 300;
+                    color: $main-color-2;
+                }
+                &-input{
+                    @include center;
+                    width: 35vw;
+                    padding: 0.9vw;
+                    margin-bottom: 1vw;
+                    background-color: $main-background-color;
+                    border: 1px solid $main-color-1;
+                    border-radius: 10px;
+                    font-family: $font-family-3;
+                    font-size: 1.5vw;
+                    font-weight: 400;
+                    &:focus{
+                        outline: none;
+                        border: 2px solid $main-color-3;
+                        
+                    }
+
+                }
+                &-textarea{
+                    @include center;
+                    width: 35vw;
+                    padding: 0.9vw 0.9vw 9vw 0.9vw;
+                    margin-bottom: 1vw;
+                    background-color: $main-background-color;
+                    border: 1px solid $main-color-1;
+                    border-radius: 10px;
+                    font-family: $font-family-3;
+                    font-size: 1.5vw;
+                    font-weight: 400;
+                    &:focus{
+                        outline: none;
+                        border: 2px solid $main-color-3;
+                        
+                    }
+                }
+                &-button{
+                    padding-top: 3vw;
+                    width: 100%;
+                    @include center;
+                    &-btn{
+                        padding: 8px 20px;
+                        background-color: $main-color-3;
+                        border: none;
+                        color: $main-color-2;
+                        font-family: $font-family-1;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        transition: transform 0.3s ease; 
+
+                        &:hover {
+                            transform: scale(1.1); 
+                        }
+                    }
+                }
+            }
+        }
+        &-right{
+            @include center;
+            width: 50%;
+            &-image{
+                width: 80%;
+                @include center;
+                 
+                &-logo{
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+
+    &__content{
+        @include center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30vw;
+        background-color: $main-background-color;
+        padding: 3vw;
+        border-radius: 10px;
+        border: 2px solid $main-color-5;
+        
+
+        &-text{
+            @include center;
+            font-family: $font-family-2;
+            font-size: 1.5vw;
+            line-height: 2vw;
+            text-align: center
+
+
+        }
+        &-btn{
+            @include center;
+            margin-top: 2vw;
+            padding: 8px 20px;
+            background-color: $main-color-3;
+            border: none;
+            color: $main-color-2;
+            font-family: $font-family-1;
+            font-size: 1.2rem;
+            font-weight: 400;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.3s ease; 
+            &:hover {
+                transform: scale(1.1); 
+                        }
+
+        }
+    }
+}
+
+@media (max-width : 600px) {
+    .contact{
+        &__header{
+            padding-bottom: 15vw;
+        }
+
+        &__header-title{
+            @include title-mobile-style;
+            font-family: $font-family-3;
+            font-size: 4vw;
+            padding-top: 20vw;
+            padding-left: 10vw;
+            text-align: center;
+        }
+        &__header-text{
+            @include title-mobile-style;
+            padding-top: 9vw;
+        }
+
+        &__content{
+            flex-direction: column;
+            &-left{
+                width: 100%;
+                padding-bottom: 10vw;
+                &-form{
+                    &-label{
+                        font-size: 3vw;
+                    }
+
+                    &-input{
+                        width: 70vw;
+                        padding: 3vw;
+                        margin-bottom: 3vw;
+                        font-size: 3.5vw;
+                    }
+                    &-textarea {
+                        width: 70vw;
+                        padding: 3vw 3vw 33vw 3vw ;
+                        font-size: 3.5vw;
+                    }
+                    &-button{
+                        padding-top: 7vw;
+                    }
+                }
+            }
+            &-right{
+                width: 100%;
+            }
+        }
+    }
+
+    .modal__content{
+        width: 60vw;
+        &-text{
+            font-size: 3.5vw;
+            line-height: 5vw;
+            padding-bottom: 3vw;
+        }
+    }
+}

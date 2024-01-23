@@ -1,0 +1,15 @@
+.metallerie{
+
+    &__banner{
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+    }
+    &__content{
+        position: absolute;
+        top: calc(50vh);
+        width: 100%;
+        background-color: $main-background-color;
+        z-index: 80;
+    }
+}

@@ -1,0 +1,133 @@
+.plomberie__services{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    background-color: $main-background-color;
+
+    &-left{
+        width: 50%;
+
+        &-image{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            height: 40vw;
+
+            &-img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+        }
+    }
+    &-right{
+        width: 50%;
+        padding-right: 5%;
+        &-title{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+            &-h1{
+                font-family: $font-family-2;
+                font-size: 5vw;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: rgb(38, 37, 37);
+
+            }
+        }
+        &-yellow{
+            background-color: rgba(204, 88, 3, 0.5);;
+            height: 35vw;
+            width: 50%;
+            position: absolute;
+            left: 45%;
+            top: 42%;
+            transform: translate(-0%, -40%);
+            @include center;
+
+            &-list{
+                color: rgb(58, 55, 55);
+                list-style-type:disc;
+                font-size: 1.6vw;
+                line-height: 2vw;
+                padding-left: 20%;
+                font-weight: 200;
+
+                &-item{
+                    padding-bottom: 0.8vw;
+
+                }
+
+            }
+        }
+    }
+}
+
+.plomberie__services-left-image-filter{
+    display: none;
+
+}
+
+@media (max-width : 600px) {
+
+    .plomberie__services{
+        flex-direction: column;
+
+        &-left{
+            width: 100%;
+            position: relative;
+            &-image{
+                width: 100%;
+                &-filter{
+                    display: flex;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(255, 255, 255, 0.2); 
+                }
+            }
+        }
+        &-right{
+            width: 100%;
+            @include center;
+            padding: 0;
+            &-title{
+                justify-content: center;
+                position: relative;
+                top: -13vw;
+                z-index: 7;
+                &-h1{
+                    font-size: 7vw;
+                    font-weight: 400;
+                }
+            }
+            &-yellow{
+                position: relative;
+                height: auto;
+                width: 80vw;
+                left: auto;
+                top: -16vw;
+                transform: translate(0%, 0%);
+                &-list{
+                    padding-top: 14vw;
+                    padding-left: 0;
+                    padding-bottom: 7vw;
+                    font-size: 3vw;
+                    line-height: 3.3vw;
+                    width: 85%;
+                    &-item{
+                        padding-bottom: 2vw;
+                    }
+                }
+
+            }
+        }
+    }
+
+}

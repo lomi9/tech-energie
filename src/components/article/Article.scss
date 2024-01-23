@@ -1,0 +1,77 @@
+@import "../../styles/utilities.scss";
+
+.section__header{
+    width: 100%;
+    background-color: $main-background-color;
+
+    &-content{
+        width: 100%;
+        @include center;
+        padding: 15vw;
+
+        &-title{
+            position: relative;
+            @include center;
+            &-h1{
+                @include center;
+                width: 100%;
+                text-align: center;
+                @include title-desktop-style;
+                position: relative;
+
+            }
+            &-underline1{
+                position: absolute;
+                height: 100%;
+                width: 20vw;
+                background-color: transparent;
+                border-bottom: 1px solid $main-color-3;
+                bottom: 0;
+                z-index: 10;
+
+            }
+            &-underline2{
+                position: absolute;
+                height: 100%;
+                width: 20vw;
+                background-color: transparent;
+                border-bottom: 1px solid $main-color-3;
+                bottom: -6px;
+                z-index: 10;
+                transform: translateX(5vw);
+                
+            }
+
+        }
+        &-text{
+            font-weight: 200;
+            font-size: 2.5vw;
+            text-align: justify;
+            line-height: 3vw;
+            padding-top: 10vw;
+
+        }
+    }
+}
+
+@media ( max-width : 768px ) {
+    .section__header-content{
+
+    }
+}
+
+@media ( max-width : 480px ) {
+    .section__header{
+    
+    &-content{
+        padding: 7% 7% 10% 7%;
+        &-title{
+            @include title-mobile-style;
+        }
+
+        &-text{
+            @include text-mobile-style;
+        }
+    }
+}
+}
