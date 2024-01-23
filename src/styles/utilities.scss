@@ -40,7 +40,7 @@ $font-family-4 : 'Play', sans-serif;
 
 @mixin text-mobile-style{
   font-family: $font-family-1;
-        font-weight: 200;
+        font-weight: 200 !important;
         line-height: 5.2vw;
         font-size: 4vw;
         text-align: justify;

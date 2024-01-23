@@ -224,6 +224,9 @@
         &__header-text{
             @include title-mobile-style;
             padding-top: 9vw;
+            &-p{
+                @include title-mobile-style;
+            }
         }
 
         &__content{
